@@ -1,0 +1,46 @@
+{
+    "role-templates":
+    [
+        {
+            "description": "Service administrator role",
+            "name": "CacheAdministrator",
+            "scope-references": ["$XSAPPNAME.CacheAdministrator"]
+        },
+        {
+            "description": "Service user role",
+            "name": "Everyone",
+            "scope-references": ["$XSAPPNAME.Everyone"]
+        },
+        {
+            "description": "Service administrator role",
+            "name": "ServerAdministrator",
+            "scope-references": ["$XSAPPNAME.ServerAdministrator"]
+        },
+        {
+            "description": "Resource role",
+            "name": "ViewMetrics",
+            "scope-references": ["$XSAPPNAME.ViewMetrics"]
+        }
+    ],
+    "scopes":
+    [
+        {
+            "description": "Service administrator scope",
+            "name": "$XSAPPNAME.CacheAdministrator"
+        },
+        {
+            "description": "Service user scope",
+            "name": "$XSAPPNAME.Everyone"
+        },
+        {
+            "description": "Service administrator scope",
+            "name": "$XSAPPNAME.ServerAdministrator"
+        },
+        {
+            "description": "Resource scope",
+            "name": "$XSAPPNAME.ViewMetrics"
+        }
+    ],
+    "tenant-mode": "dedicated",
+    "xsappname": "MbtEpmDemoService"
+}

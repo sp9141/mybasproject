@@ -1,0 +1,31 @@
+---
+_schema-version: 2.1
+ID: com.example.mta
+version: 1.0.0
+modules:
+  -
+    # application
+    name: MbtEpmDemoService
+    # module
+    path: srv/deploy/odata-service-1.0.0.war
+    type: java
+    parameters:
+      instances: 1
+      memory: 2G
+      disk: 2G
+    properties:
+      TARGET_RUNTIME: tomcat
+      JBP_CONFIG_COMPONENTS: "jres: ['com.sap.xs.java.buildpack.jdk.SAPMachineJDK']"
+      JBP_CONFIG_SAP_MACHINE_JDK: "{ version: 11.+ }"
+      # jco-config
+      USE_JCO: false
+      # log-config
+      # [console]
+      # debug-opts
+      # [none]
+    # requires:
+      # requires-db
+      # [h2db]
+# resources:
+  # db-resource
+  # [h2db]

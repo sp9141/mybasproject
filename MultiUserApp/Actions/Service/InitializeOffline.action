@@ -1,0 +1,20 @@
+{
+    "Service": "/MultiUserApp/Services/SampleServiceV4.service",
+    "DefiningRequests": [{
+            "Name": "Products",
+            "Query": "Products"
+        },
+        {
+            "Name": "Customers",
+            "Query": "Customers"
+        }
+    ],
+    "_Type": "Action.Type.ODataService.Initialize",
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText": "Downloading...",
+    "ActionResult": {
+        "_Name": "init"
+    },
+    "OnSuccess": "/MultiUserApp/Actions/Service/InitializeOfflineSuccessMessage.action",
+    "OnFailure": "/MultiUserApp/Actions/Service/InitializeOfflineFailureMessage.action"
+}

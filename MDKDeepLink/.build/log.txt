@@ -1,0 +1,2 @@
+Pass:
+Generated bundle file /home/user/projects/MDKDeepLink/.build/MDKDeepLink/.build/uploadBundle.zip

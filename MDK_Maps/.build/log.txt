@@ -1,0 +1,2 @@
+Pass:
+Generated bundle file /home/user/projects/MDK_Maps/.build/MDK_Maps/.build/uploadBundle.zip

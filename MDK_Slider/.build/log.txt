@@ -1,0 +1,2 @@
+Pass:
+Generated bundle file /home/user/projects/MDK_Slider/.build/MDK_Slider/.build/uploadBundle.zip

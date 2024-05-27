@@ -1,0 +1,30 @@
+---
+applications:
+  -
+    # application
+    name: MbtEpmDemoService
+    # module
+    path: deploy/odata-service-1.0.0.war
+    random-route: true
+    buildpacks:
+    # buildpack
+    - sap_java_buildpack
+    instances: 1
+    memory: 2G
+    disk: 2G
+    env:
+    TARGET_RUNTIME: tomcat
+    JBP_CONFIG_COMPONENTS: "jres: ['com.sap.xs.java.buildpack.jdk.SAPMachineJDK']"
+    JBP_CONFIG_SAP_MACHINE_JDK: "{ version: 11.+ }"
+    # jco-config
+    USE_JCO: false
+    # log-config
+    # [console]
+    # debug-opts
+    # [none]
+    services:
+    # db-service
+    # [h2db]
+    - MbtEpmDemoService-destination
+    # xsuaa-service
+    - MbtEpmDemoService-xsuaa

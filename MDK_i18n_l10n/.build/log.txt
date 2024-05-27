@@ -1,0 +1,2 @@
+Pass:
+Generated bundle file /home/user/projects/MDK_i18n_l10n/.build/MDK_i18n_l10n/.build/uploadBundle.zip

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/odata/ns/edmx http://docs.oasis-open.org/odata/odata/v4.0/os/schemas/edmx.xsd http://docs.oasis-open.org/odata/ns/edm http://docs.oasis-open.org/odata/odata/v4.0/os/schemas/edm.xsd">
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="Core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="vocabularies/com.sap.cloud.server.odata.sql.v1.xml">
+        <edmx:Include Namespace="com.sap.cloud.server.odata.sql.v1" Alias="SQL"/>
+    </edmx:Reference>    
+    <edmx:Reference Uri="vocabularies/com.sap.cloud.server.odata.cache.v1.xml">
+        <edmx:Include Namespace="com.sap.cloud.server.odata.cache.v1" Alias="Cache"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="vocabularies/com.sap.cloud.server.odata.http.v1.xml">
+        <edmx:Include Namespace="com.sap.cloud.server.odata.http.v1" Alias="HTTP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="com.sap.mbtepmdemo" Alias="Self" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <ComplexType Name="CT_Address">
+                <Property Name="AddressType" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="Building" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="City" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="Country" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="PostalCode" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="Street" Type="Edm.String" Nullable="false" MaxLength="60"/>
+            </ComplexType>
+            <EntityType Name="BusinessPartner">
+                <Key>
+                    <PropertyRef Name="BusinessPartnerID"/>
+                </Key>
+                 <Property Name="AddressType" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                 <Property Name="Building" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                 <Property Name="City" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                 <Property Name="Country" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                 <Property Name="PostalCode" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                 <Property Name="Street" Type="Edm.String" Nullable="false" MaxLength="60"/>
+        <!--<Property Name="Address" Type="Self.CT_Address" Nullable="false"/>-->
+                <Property Name="BusinessPartnerID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="BusinessPartnerRole" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="CompanyName" Type="Edm.String" Nullable="false" MaxLength="80"/>
+                <Property Name="FaxNumber" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="LegalForm" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="PhoneNumber" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <NavigationProperty Name="ToSalesOrders" Type="Collection(Self.SalesOrder)" Partner="ToBusinessPartner"/>
+           <Annotation Term="Cache.RefreshBy" String="loadAll"/>
+<Annotation Term="HTTP.Request" Qualifier="loadAll" String="GET /sap/opu/odata/IWBEP/GWSAMPLE_BASIC/BusinessPartnerSet">
+  <Annotation Term="HTTP.ResponseBody">
+    <String>
+    {"d":{"results":
+    [{
+      "Address": {
+          "AddressType": "${entity.AddressType}",
+          "Building": "${entity.Building}",
+          "City": "${entity.City}",
+          "Country": "${entity.Country}",
+          "PostalCode": "${entity.PostalCode}",
+          "Street": "${entity.Street}"
+      },
+      "BusinessPartnerID": "${entity.BusinessPartnerID}",
+      "BusinessPartnerRole": "${entity.BusinessPartnerRole}",
+      "CompanyName": "${entity.CompanyName}",
+      "FaxNumber": "${entity.FaxNumber}",
+      "LegalForm": "${entity.LegalForm}",
+      "PhoneNumber": "${entity.PhoneNumber}"
+    }]
+    }}                        
+    </String>
+  </Annotation>
+  <Annotation Term="HTTP.RequestHeaders">
+    <String>
+    {
+      "Accept": "application/json"
+    }
+    </String>
+  </Annotation>
+</Annotation>
+            </EntityType>
+            <EntityType Name="SalesOrder">
+                <Key>
+                    <PropertyRef Name="SalesOrderID"/>
+                </Key>
+                <Property Name="BillingStatus" Type="Edm.String" Nullable="true" MaxLength="1"/>
+                <Property Name="BillingStatusDescription" Type="Edm.String" Nullable="true" MaxLength="60"/>
+                <Property Name="BusinessPartnerID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="ChangedAt" Type="Edm.DateTimeOffset" Nullable="true" Precision="7"/>
+                <Property Name="CreatedAt" Type="Edm.DateTimeOffset" Nullable="true" Precision="7"/>
+                <Property Name="CurrencyCode" Type="Edm.String" Nullable="true" MaxLength="5"/>
+                <Property Name="CustomerID" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="CustomerName" Type="Edm.String" Nullable="true" MaxLength="80"/>
+                <Property Name="DeliveryStatus" Type="Edm.String" Nullable="true" MaxLength="1"/>
+                <Property Name="DeliveryStatusDescription" Type="Edm.String" Nullable="true" MaxLength="60"/>
+                <Property Name="GrossAmount" Type="Edm.Decimal" Nullable="true" Precision="16" Scale="3"/>
+                <Property Name="LifecycleStatus" Type="Edm.String" Nullable="true" MaxLength="1"/>
+                <Property Name="LifecycleStatusDescription" Type="Edm.String" Nullable="true" MaxLength="60"/>
+                <Property Name="NetAmount" Type="Edm.Decimal" Nullable="true" Precision="16" Scale="3"/>
+                <Property Name="Note" Type="Edm.String" Nullable="true" MaxLength="255"/>
+                <Property Name="NoteLanguage" Type="Edm.String" Nullable="true" MaxLength="2"/>
+                <Property Name="SalesOrderID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="TaxAmount" Type="Edm.Decimal" Nullable="true" Precision="16" Scale="3"/>
+                <NavigationProperty Name="ToBusinessPartner" Type="Self.BusinessPartner" Nullable="false" Partner="ToSalesOrders">
+                    <ReferentialConstraint Property="BusinessPartnerID" ReferencedProperty="BusinessPartnerID"/>
+                </NavigationProperty>
+            <Annotation Term="Cache.RefreshBy" String="loadAll"/>
+            <Annotation Term="HTTP.Request" Qualifier="loadAll" String="GET /sap/opu/odata/IWBEP/GWSAMPLE_BASIC/SalesOrderSet">
+  <Annotation Term="HTTP.ResponseBody">
+    <String>
+    {"d":{"results":
+    [{
+      "BillingStatus": "${entity.BillingStatus}",
+      "BillingStatusDescription": "${entity.BillingStatusDescription}",
+      "CustomerID": "${entity.BusinessPartnerID}",
+      "CurrencyCode": "${entity.CurrencyCode}",
+      "CustomerName": "${entity.CustomerName}",
+      "SalesOrderID": "${entity.SalesOrderID}",
+      "DeliveryStatus": "${entity.DeliveryStatus}",
+      "DeliveryStatusDescription": "${entity.DeliveryStatusDescription}",
+      "GrossAmount": "${entity.GrossAmount}",
+      "LifecycleStatus": "${entity.LifecycleStatus}",
+      "LifecycleStatusDescription": "${entity.LifecycleStatusDescription}",
+      "NetAmount": "${entity.NetAmount}",
+      "Note": "${entity.Note}",
+      "NoteLanguage": "${entity.NoteLanguage}",
+      "CustomerName": "${entity.CustomerName}",
+      "TaxAmount": "${entity.TaxAmount}"
+    }]
+    }}                        
+    </String>
+  </Annotation>
+  <Annotation Term="HTTP.RequestHeaders">
+    <String>
+    {
+      "Accept": "application/json"
+    }
+    </String>
+  </Annotation>
+</Annotation>
+            </EntityType>
+            <EntityContainer Name="Com_sap_mbtepmdemoService">
+                <Annotation Term="Cache.HttpDestination" String="ES5"/>
+                 <Annotation Term="SQL.CacheDatabase"/>
+                 <Annotation Term="SQL.TrackChanges"/>
+                 <Annotation Term="SQL.TrackDownloads" />
+                <EntitySet Name="BusinessPartnerSet" EntityType="Self.BusinessPartner">
+                    <NavigationPropertyBinding Path="ToSalesOrders" Target="SalesOrderSet"/>
+                </EntitySet>
+                <EntitySet Name="SalesOrderSet" EntityType="Self.SalesOrder">
+                    <NavigationPropertyBinding Path="ToBusinessPartner" Target="BusinessPartnerSet"/>
+                </EntitySet>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

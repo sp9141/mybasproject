@@ -1,0 +1,172 @@
+[
+    {
+        "Address":
+        {
+            "AddressType": "AB",
+            "Building": "ABCDEFGHIJ",
+            "City": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            "Country": "ABC",
+            "PostalCode": "ABCDEFGHIJ",
+            "Street": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        },
+        "BusinessPartnerID": 101,
+        "BusinessPartnerRole": "ABC",
+        "CompanyName": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "FaxNumber": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "LegalForm": "ABCDEFGHIJ",
+        "PhoneNumber": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    },
+    {
+        "Address":
+        {
+            "AddressType": "XY",
+            "Building": "XYZ",
+            "City": "XYZ",
+            "Country": "XYZ",
+            "PostalCode": "XYZ",
+            "Street": "XYZ"
+        },
+        "BusinessPartnerID": 102,
+        "BusinessPartnerRole": "XYZ",
+        "CompanyName": "XYZ",
+        "FaxNumber": "XYZ",
+        "LegalForm": "XYZ",
+        "PhoneNumber": "XYZ"
+    },
+    {
+        "Address":
+        {
+            "AddressType": "AB",
+            "Building": "ABCDEFGHIJ",
+            "City": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            "Country": "ABC",
+            "PostalCode": "ABCDEFGHIJ",
+            "Street": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        },
+        "BusinessPartnerID": 103,
+        "BusinessPartnerRole": "ABC",
+        "CompanyName": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "FaxNumber": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "LegalForm": "ABCDEFGHIJ",
+        "PhoneNumber": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    },
+    {
+        "Address":
+        {
+            "AddressType": "XY",
+            "Building": "XYZ",
+            "City": "XYZ",
+            "Country": "XYZ",
+            "PostalCode": "XYZ",
+            "Street": "XYZ"
+        },
+        "BusinessPartnerID": 104,
+        "BusinessPartnerRole": "XYZ",
+        "CompanyName": "XYZ",
+        "FaxNumber": "XYZ",
+        "LegalForm": "XYZ",
+        "PhoneNumber": "XYZ"
+    },
+    {
+        "Address":
+        {
+            "AddressType": "AB",
+            "Building": "ABCDEFGHIJ",
+            "City": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            "Country": "ABC",
+            "PostalCode": "ABCDEFGHIJ",
+            "Street": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        },
+        "BusinessPartnerID": 105,
+        "BusinessPartnerRole": "ABC",
+        "CompanyName": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "FaxNumber": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "LegalForm": "ABCDEFGHIJ",
+        "PhoneNumber": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    },
+    {
+        "Address":
+        {
+            "AddressType": "XY",
+            "Building": "XYZ",
+            "City": "XYZ",
+            "Country": "XYZ",
+            "PostalCode": "XYZ",
+            "Street": "XYZ"
+        },
+        "BusinessPartnerID": 106,
+        "BusinessPartnerRole": "XYZ",
+        "CompanyName": "XYZ",
+        "FaxNumber": "XYZ",
+        "LegalForm": "XYZ",
+        "PhoneNumber": "XYZ"
+    },
+    {
+        "Address":
+        {
+            "AddressType": "AB",
+            "Building": "ABCDEFGHIJ",
+            "City": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            "Country": "ABC",
+            "PostalCode": "ABCDEFGHIJ",
+            "Street": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        },
+        "BusinessPartnerID": 107,
+        "BusinessPartnerRole": "ABC",
+        "CompanyName": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "FaxNumber": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "LegalForm": "ABCDEFGHIJ",
+        "PhoneNumber": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    },
+    {
+        "Address":
+        {
+            "AddressType": "XY",
+            "Building": "XYZ",
+            "City": "XYZ",
+            "Country": "XYZ",
+            "PostalCode": "XYZ",
+            "Street": "XYZ"
+        },
+        "BusinessPartnerID": 108,
+        "BusinessPartnerRole": "XYZ",
+        "CompanyName": "XYZ",
+        "FaxNumber": "XYZ",
+        "LegalForm": "XYZ",
+        "PhoneNumber": "XYZ"
+    },
+    {
+        "Address":
+        {
+            "AddressType": "AB",
+            "Building": "ABCDEFGHIJ",
+            "City": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            "Country": "ABC",
+            "PostalCode": "ABCDEFGHIJ",
+            "Street": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        },
+        "BusinessPartnerID": 109,
+        "BusinessPartnerRole": "ABC",
+        "CompanyName": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "FaxNumber": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "LegalForm": "ABCDEFGHIJ",
+        "PhoneNumber": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    },
+    {
+        "Address":
+        {
+            "AddressType": "XY",
+            "Building": "XYZ",
+            "City": "XYZ",
+            "Country": "XYZ",
+            "PostalCode": "XYZ",
+            "Street": "XYZ"
+        },
+        "BusinessPartnerID": 110,
+        "BusinessPartnerRole": "XYZ",
+        "CompanyName": "XYZ",
+        "FaxNumber": "XYZ",
+        "LegalForm": "XYZ",
+        "PhoneNumber": "XYZ"
+    }
+]

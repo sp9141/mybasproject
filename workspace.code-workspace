@@ -1,0 +1,24 @@
+{
+    "folders": [
+        {
+            "path": "DemoSampleApp"
+        },
+        {
+            "name": "MDK_ErrorArchive",
+            "path": "MDK_ErrorArchive"
+        }
+    ],
+    "settings": {
+        "mdk.uieditor": {
+            "left": {
+                "visible": true,
+                "width": 279
+            },
+            "right": {
+                "visible": true,
+                "width": 284
+            },
+            "device": "phone"
+        }
+    }
+}

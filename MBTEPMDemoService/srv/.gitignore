@@ -1,0 +1,7 @@
+/bin/cf-logs*
+/deploy
+/logs
+/src/main/java/com/sap/mbtepmdemo/base
+/src/main/java/com/sap/mbtepmdemo/proxy
+/target
+/vocabularies

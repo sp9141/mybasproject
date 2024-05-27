@@ -1,0 +1,18 @@
+{
+    "Service": "/MultiUserApp/Services/SampleServiceV4.service",
+    "DefiningRequests": [{
+            "Name": "Products",
+            "Query": "Products"
+        },
+        {
+            "Name": "Customers",
+            "Query": "Customers"
+        }
+    ],
+    "_Type": "Action.Type.OfflineOData.Download",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnFailure": "/MultiUserApp/Actions/Service/SyncFailureMessage.action",
+    "OnSuccess": "/MultiUserApp/Rules/ErrorArchive/ErrorArchive_CheckForSyncError.js"
+}

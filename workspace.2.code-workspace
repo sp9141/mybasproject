@@ -1,0 +1,37 @@
+{
+    "folders": [
+        {
+            "path": "MDK_ErrorArchive"
+        },
+        {
+            "name": "MDK_Styling",
+            "path": "MDK_Styling"
+        },
+        {
+            "name": "MDKDeepLink",
+            "path": "MDKDeepLink"
+        },
+        {
+            "name": "MDK_Annotations",
+            "path": "MDK_Annotations"
+        },
+        {
+            "name": "MDK_i18n_l10n",
+            "path": "MDK_i18n_l10n"
+        }
+    ],
+    "settings": {
+        "mdk.uieditor": {
+            "left": {
+                "visible": true
+            },
+            "right": {
+                "visible": true,
+                "width": 331
+            }
+        },
+        "mdk.i18n": {
+            "displayLanguages": "i18n"
+        }
+    }
+}
